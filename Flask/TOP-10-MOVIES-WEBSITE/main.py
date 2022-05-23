@@ -8,7 +8,7 @@ from tmdbv3api import TMDb
 from tmdbv3api import Movie
 
 tmdb = TMDb()
-tmdb.api_key = '7d3511b71f300bc2591d50cc04c442cf'
+tmdb.api_key = 'API KEY'
 tmdb.language = 'en'
 tmdb.debug = True
 movie = Movie()
@@ -16,7 +16,7 @@ movie = Movie()
 Movie_IMG = "https://www.themoviedb.org/t/p/w600_and_h900_bestv2"
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'ANY SECRETE KEY'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///movies-collection.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 Bootstrap(app)
