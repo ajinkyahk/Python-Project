@@ -1,0 +1,842 @@
+{
+	"info": {
+		"_postman_id": "974d6833-ff5b-42f8-82b4-2f0445f6d1fd",
+		"name": "Cafe & Wifi",
+		"description": "This API will give you information about cafes, like names, locations, ratings, etc.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21153043"
+	},
+	"item": [
+		{
+			"name": "Suggest a random Cafe.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/random",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"random"
+					]
+				},
+				"description": "The /random route will search the cafe's database and return random cafe details."
+			},
+			"response": [
+				{
+					"name": "Suggest a random Cafe.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/random",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"random"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 12:42:12 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "377"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"can_take_calls\": false,\n    \"coffee_price\": \"£2.80\",\n    \"has_sockets\": true,\n    \"has_toilet\": true,\n    \"has_wifi\": true,\n    \"id\": 6,\n    \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipN-C650VmJ1XZhzOIBTg1bUu3_to_GHpyrmUplt=s0\",\n    \"location\": \"Hackney\",\n    \"map_url\": \"https://goo.gl/maps/DWnwaeeiwdYsBkEH9\",\n    \"name\": \"Mare Street Market\",\n    \"seats\": \"50+\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Show All Cafes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/all",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"all"
+					]
+				},
+				"description": "The /all route will search the cafe's database and return all the records."
+			},
+			"response": [
+				{
+					"name": "Show All Cafes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"all"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 12:18:53 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "9736"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cafes\": [\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.40\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": false,\n            \"id\": 1,\n            \"img_url\": \"https://atlondonbridge.com/wp-content/uploads/2019/02/Pano_9758_9761-Edit-190918_LTS_Science_Gallery-Medium-Crop-V2.jpg\",\n            \"location\": \"London Bridge\",\n            \"map_url\": \"https://g.page/scigallerylon?share\",\n            \"name\": \"Science Gallery London\",\n            \"seats\": \"50+\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.75\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 2,\n            \"img_url\": \"https://images.squarespace-cdn.com/content/v1/5734f3ff4d088e2c5b08fe13/1555848382269-9F13FE1WQDNUUDQOAOXF/ke17ZwdGBToddI8pDm48kAeyi0pcxjZfLZiASAF9yCBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzV8NE8s7067ZLWyi1jRvJklJnlBFEUyq1al9AqaQ7pI4DcRJq_Lf3JCtFMXgpPQyk/copeland-park-bar-peckham\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://g.page/CopelandSocial?share\",\n            \"name\": \"Social - Copeland Road\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.75\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 3,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOMzXpKAQNyUvrjTGHqCgWk8spwnzwP8Ml2aDKt=s0\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://g.page/one-all-cafe?share\",\n            \"name\": \"One & All Cafe Peckham\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.80\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 4,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipPBAt6bYna7pv5c7e_PhCDPMKPb6oFf6kMT2VQ1=s0\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://www.google.com/maps/place/Old+Spike+Roastery/@51.4651552,-0.0666088,17z/data=!4m12!1m6!3m5!1s0x487603a3a7dd838d:0x4105b39b30a737cf!2sOld+Spike+Roastery!8m2!3d51.4651552!4d-0.0666088!3m4!1s0x487603a3a7dd838d:0x4105b39b30a737cf!8m2!3d51.4651552!4d-0.0666088\",\n            \"name\": \"Old Spike\",\n            \"seats\": \"0-10\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.65\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 5,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipM9Dz_QMkOF2da1aNLuTzS_vPvVWBnE84rZLK_G=s0\",\n            \"location\": \"Bermondsey\",\n            \"map_url\": \"https://goo.gl/maps/ugP2B1AV7FELHSgn6\",\n            \"name\": \"Fuckoffee Bermondsey\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.80\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 6,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipN-C650VmJ1XZhzOIBTg1bUu3_to_GHpyrmUplt=s0\",\n            \"location\": \"Hackney\",\n            \"map_url\": \"https://goo.gl/maps/DWnwaeeiwdYsBkEH9\",\n            \"name\": \"Mare Street Market\",\n            \"seats\": \"50+\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£3.00\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 7,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipP_NbZH7A1fIQyp5pRm1jOGwzKsDWewaxka6vDt=s0\",\n            \"location\": \"Shoreditch\",\n            \"map_url\": \"https://g.page/acehotellondon?share\",\n            \"name\": \"Ace Hotel Shoreditch\",\n            \"seats\": \"50+\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.10\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 8,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipPnOfo7wTICdiAyybF3iFhD3l5aoQjSO-GErma1=s0\",\n            \"location\": \"Clerkenwell\",\n            \"map_url\": \"https://goo.gl/maps/D9nXNYK3fa1cxwpK8\",\n            \"name\": \"Goswell Road Coffee\",\n            \"seats\": \"10-20\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.30\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 9,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipMrdTyRRozGBltwxAseQ4QeuNhbED6meQXlCPsx=s0\",\n            \"location\": \"London Bridge\",\n            \"map_url\": \"https://goo.gl/maps/LU1imQzBCRLFBxKUA\",\n            \"name\": \"The Southwark Cathedral Cafe\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.70\",\n            \"has_sockets\": false,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 10,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipNtHqqIc3kwhpjknrVcMdkhmpA77LDYKmpOJlxf=s0\",\n            \"location\": \"Whitechapel\",\n            \"map_url\": \"https://goo.gl/maps/v5tzRBVhPFueYp4x6\",\n            \"name\": \"Trade Commercial Road\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.70\",\n            \"has_sockets\": false,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 11,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOFimpFQmUORVGg0ER3lrfEiEnKpnYJck5guFqC=s0\",\n            \"location\": \"Bankside\",\n            \"map_url\": \"https://goo.gl/maps/6RvPHyhsDDUPs1ox8\",\n            \"name\": \"The Tate Modern Cafe\",\n            \"seats\": \"30-40\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.50\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 12,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipPyJHFtVzxor4RyQrT-ZEk7ej7OxvmIQYZUHe6G=s0\",\n            \"location\": \"Clerkenwell\",\n            \"map_url\": \"https://goo.gl/maps/HC4e9FJL48kLRH8W9\",\n            \"name\": \"Forage Cafe\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.80\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 13,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipNJQIg-6YTOZhbLu12yGPN3klDxygs7cNAjEo0C=s0\",\n            \"location\": \"Shoreditch\",\n            \"map_url\": \"https://g.page/citizenm-london-shoreditch?share\",\n            \"name\": \"Citizen M Hotel Shoreditch\",\n            \"seats\": \"30-40\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£3.00\",\n            \"has_sockets\": false,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 14,\n            \"img_url\": \"https://images.adsttc.com/media/images/5014/ec99/28ba/0d58/2800/0d0f/large_jpg/stringio.jpg?1414576924\",\n            \"location\": \"Barbican\",\n            \"map_url\": \"https://goo.gl/maps/XPrcFj91LsQBvUa27\",\n            \"name\": \"Barbican Centre\",\n            \"seats\": \"50+\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.60\",\n            \"has_sockets\": false,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 15,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOL6jxxpE_D3YS-Zzih61DqNXJKvRIDFiP6ieUI=s0\",\n            \"location\": \"Clerkenwell\",\n            \"map_url\": \"https://goo.gl/maps/mwAG272nQwSUc9bn8\",\n            \"name\": \"The Slaughtered Lamb\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£1.80\",\n            \"has_sockets\": false,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 16,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOchpT9ipgb7tpqglcTKpp2E8kZhsKvlYjUZ4e1=s0\",\n            \"location\": \"South Kensington\",\n            \"map_url\": \"https://goo.gl/maps/GPFSEuGEiDvQG8BH7\",\n            \"name\": \"Fernandez and Wells Exhibition Road\",\n            \"seats\": \"10-20\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.60\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 17,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOZ3WDAAxphLu657afVVATJ5TGxtturIOr8gt8u=s0\",\n            \"location\": \"Whitechapel\",\n            \"map_url\": \"https://goo.gl/maps/xv29seioiETAAZgN9\",\n            \"name\": \"Whitechapel Grind\",\n            \"seats\": \"30-40\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.60\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 18,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOutkI7wjWNXiPSTdf8CX0jXwyVHFTwFnVhyVJE=s0\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://goo.gl/maps/qpcpX7MWhFSS1qxH9\",\n            \"name\": \"The Peckham Pelican\",\n            \"seats\": \"0 - 10\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.00\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 19,\n            \"img_url\": \"https://www.nhm.ac.uk/content/dam/nhmwww/business-services/filming/Earth-Sciences-Library-1.jpg\",\n            \"location\": \"South Kensington\",\n            \"map_url\": \"https://goo.gl/maps/VU2PwnDDtH1WqCnK7\",\n            \"name\": \"Natural History Museum Library\",\n            \"seats\": \"40-50\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.80\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 20,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipNlBWFgXBiP9YjKARy4dgjHGePOmtsfuQPRwGvb=s0\",\n            \"location\": \"Shoreditch\",\n            \"map_url\": \"https://goo.gl/maps/gYX271NxyuawiMcK8\",\n            \"name\": \"The Bike Shed\",\n            \"seats\": \"10-20\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.40\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 21,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOhkJk2MBtFW1RydPU0zf3bf8upGkTQWyhDpXzZ=s0\",\n            \"location\": \"Borough\",\n            \"map_url\": \"https://g.page/fora---borough?share\",\n            \"name\": \"FORA Borough\",\n            \"seats\": \"20-30\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Seach A Single Cafe At A Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/search_one?loc=Peckham",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search_one"
+					],
+					"query": [
+						{
+							"key": "loc",
+							"value": "Peckham"
+						}
+					]
+				},
+				"description": "The /search_one will search the cafe's database for a cafe that matches the location queried. Use the loc parameter to pass a location name."
+			},
+			"response": [
+				{
+					"name": "Seach A Single Cafe At A Location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/search_one?loc=Peckham",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"search_one"
+							],
+							"query": [
+								{
+									"key": "loc",
+									"value": "Peckham"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 12:34:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "639"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cafe\": {\n        \"can_take_calls\": false,\n        \"coffee_price\": \"£2.75\",\n        \"has_sockets\": true,\n        \"has_toilet\": true,\n        \"has_wifi\": true,\n        \"id\": 2,\n        \"img_url\": \"https://images.squarespace-cdn.com/content/v1/5734f3ff4d088e2c5b08fe13/1555848382269-9F13FE1WQDNUUDQOAOXF/ke17ZwdGBToddI8pDm48kAeyi0pcxjZfLZiASAF9yCBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzV8NE8s7067ZLWyi1jRvJklJnlBFEUyq1al9AqaQ7pI4DcRJq_Lf3JCtFMXgpPQyk/copeland-park-bar-peckham\",\n        \"location\": \"Peckham\",\n        \"map_url\": \"https://g.page/CopelandSocial?share\",\n        \"name\": \"Social - Copeland Road\",\n        \"seats\": \"20-30\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Seach All Cafe At A Location",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/search?loc=Peckham",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "loc",
+							"value": "Peckham"
+						}
+					]
+				},
+				"description": "The /search route will search the cafe's database for all cafe that matches the location queried. Use the loc parameter to pass a location name."
+			},
+			"response": [
+				{
+					"name": "Search All Cafe At A Location",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/search?loc=Peckham",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "loc",
+									"value": "Peckham"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 12:37:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2193"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"cafes\": [\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.75\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 2,\n            \"img_url\": \"https://images.squarespace-cdn.com/content/v1/5734f3ff4d088e2c5b08fe13/1555848382269-9F13FE1WQDNUUDQOAOXF/ke17ZwdGBToddI8pDm48kAeyi0pcxjZfLZiASAF9yCBZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpzV8NE8s7067ZLWyi1jRvJklJnlBFEUyq1al9AqaQ7pI4DcRJq_Lf3JCtFMXgpPQyk/copeland-park-bar-peckham\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://g.page/CopelandSocial?share\",\n            \"name\": \"Social - Copeland Road\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.75\",\n            \"has_sockets\": true,\n            \"has_toilet\": true,\n            \"has_wifi\": true,\n            \"id\": 3,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOMzXpKAQNyUvrjTGHqCgWk8spwnzwP8Ml2aDKt=s0\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://g.page/one-all-cafe?share\",\n            \"name\": \"One & All Cafe Peckham\",\n            \"seats\": \"20-30\"\n        },\n        {\n            \"can_take_calls\": false,\n            \"coffee_price\": \"£2.80\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 4,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipPBAt6bYna7pv5c7e_PhCDPMKPb6oFf6kMT2VQ1=s0\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://www.google.com/maps/place/Old+Spike+Roastery/@51.4651552,-0.0666088,17z/data=!4m12!1m6!3m5!1s0x487603a3a7dd838d:0x4105b39b30a737cf!2sOld+Spike+Roastery!8m2!3d51.4651552!4d-0.0666088!3m4!1s0x487603a3a7dd838d:0x4105b39b30a737cf!8m2!3d51.4651552!4d-0.0666088\",\n            \"name\": \"Old Spike\",\n            \"seats\": \"0-10\"\n        },\n        {\n            \"can_take_calls\": true,\n            \"coffee_price\": \"£2.60\",\n            \"has_sockets\": true,\n            \"has_toilet\": false,\n            \"has_wifi\": true,\n            \"id\": 18,\n            \"img_url\": \"https://lh3.googleusercontent.com/p/AF1QipOutkI7wjWNXiPSTdf8CX0jXwyVHFTwFnVhyVJE=s0\",\n            \"location\": \"Peckham\",\n            \"map_url\": \"https://goo.gl/maps/qpcpX7MWhFSS1qxH9\",\n            \"name\": \"The Peckham Pelican\",\n            \"seats\": \"0 - 10\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Cafe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "TIMBERYARD",
+							"type": "text"
+						},
+						{
+							"key": "map_url",
+							"value": "https://goo.gl/maps/KgE2CVPWjj25sZ9C9",
+							"type": "text"
+						},
+						{
+							"key": "img_url",
+							"value": "https://lh5.googleusercontent.com/p/AF1QipPW16Ln-OGn6D1zq8yZlP60wqBZukTHuC9SViWS=w408-h544-k-no",
+							"type": "text"
+						},
+						{
+							"key": "loc",
+							"value": "Edinburgh",
+							"type": "text"
+						},
+						{
+							"key": "sockets",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "toilet",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "wifi",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "calls",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "seats",
+							"value": "30-40",
+							"type": "text"
+						},
+						{
+							"key": "coffee_price",
+							"value": "£3.40",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/add",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add"
+					]
+				},
+				"description": "The /add route will add a cafe details in the database. POST request."
+			},
+			"response": [
+				{
+					"name": "Add Cafe",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "TIMBERYARD",
+									"type": "text"
+								},
+								{
+									"key": "map_url",
+									"value": "https://goo.gl/maps/KgE2CVPWjj25sZ9C9",
+									"type": "text"
+								},
+								{
+									"key": "img_url",
+									"value": "https://lh5.googleusercontent.com/p/AF1QipPW16Ln-OGn6D1zq8yZlP60wqBZukTHuC9SViWS=w408-h544-k-no",
+									"type": "text"
+								},
+								{
+									"key": "loc",
+									"value": "Edinburgh",
+									"type": "text"
+								},
+								{
+									"key": "sockets",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "toilet",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "wifi",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "calls",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "seats",
+									"value": "30-40",
+									"type": "text"
+								},
+								{
+									"key": "coffee_price",
+									"value": "£3.40",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/add",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"add"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 13:43:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"success\": \"Successfully added the new cafe.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Coffee Price",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/update-price/25?new_price=£2.50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"update-price",
+						"25"
+					],
+					"query": [
+						{
+							"key": "new_price",
+							"value": "£2.50"
+						}
+					]
+				},
+				"description": "The /update-price/id route will update the coffee price of the cafe selected by cafe id. Use new_price variable to update new price."
+			},
+			"response": [
+				{
+					"name": "Update Coffee Price Success",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/update-price/22?new_price=£2.50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"update-price",
+								"22"
+							],
+							"query": [
+								{
+									"key": "new_price",
+									"value": "£2.50"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 14:14:47 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "80"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"success\": \"Successfully updated the coffee price.\"\n    }\n}"
+				},
+				{
+					"name": "Update Coffee Price Error",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/update-price/25?new_price=£2.50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"update-price",
+								"25"
+							],
+							"query": [
+								{
+									"key": "new_price",
+									"value": "£2.50"
+								}
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 14:22:29 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "97"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"Not Found\": \"Sorry a cafe with that id was not found in the database.\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete A Cafe Record",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/report-closed/25?api-key=sjsdbjie65d63hejbddfdfg",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"report-closed",
+						"25"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "sjsdbjie65d63hejbddfdfg"
+						}
+					]
+				},
+				"description": "The /report-closed/id route will delete the cafe record selected by provided cafe id.\n\nUse api-key variable to provide top secrete key for authorization."
+			},
+			"response": [
+				{
+					"name": "Delete A Cafe Record Success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/report-closed/22?api-key=sjsdbjie65d63hejbd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"report-closed",
+								"22"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "sjsdbjie65d63hejbd"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 14:40:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "90"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"response\": {\n        \"success\": \"Successfully deleted the cafe from the database.\"\n    }\n}"
+				},
+				{
+					"name": "Delete A Cafe Record Error",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/report-closed/25?api-key=sjsdbjie65d63hejbd",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"report-closed",
+								"25"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "sjsdbjie65d63hejbd"
+								}
+							]
+						}
+					},
+					"status": "NOT FOUND",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 14:41:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "97"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"Not Found\": \"Sorry a cafe with that id was not found in the database.\"\n    }\n}"
+				},
+				{
+					"name": "Delete A Cafe Record Not Allowed",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/report-closed/25?api-key=sjsdbjie65d63hejbddfdfg",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"report-closed",
+								"25"
+							],
+							"query": [
+								{
+									"key": "api-key",
+									"value": "sjsdbjie65d63hejbddfdfg"
+								}
+							]
+						}
+					},
+					"status": "FORBIDDEN",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.1.2 Python/3.10.4"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 25 May 2022 14:41:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "107"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"error\": {\n        \"Forbidden\": \"Sorry, that's not allowed. Make sure you have the correct api_key.\"\n    }\n}"
+				}
+			]
+		}
+	]
+}
